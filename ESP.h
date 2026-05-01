@@ -1,3 +1,6 @@
+
+
+
 static uintptr_t GetUE4Base() {
     uintptr_t ue4_base = 0;
     FILE* maps = fopen("/proc/self/maps", "r");
@@ -100,6 +103,17 @@ struct ESPData {
     float MaxHealth;
     float ScreenX2, ScreenY2;
 };
+
+static bool g_ESP_Enabled = false;
+static bool g_ESP_Players = true;
+static bool g_ESP_WildDinos = true;
+static bool g_ESP_TamedDinos = true;
+static bool g_ESP_Boxes = true;
+static bool g_ESP_Snaplines = true;
+static bool g_ESP_Distance = true;
+static bool g_ESP_Names = true;
+static bool g_ESP_Health = true;
+static float g_ESP_MaxDistance = 300.0f;
 
 static ESPData g_ESPData[1000];
 static int g_ESPCount = 0;

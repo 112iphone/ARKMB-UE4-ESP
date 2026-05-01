@@ -446,6 +446,7 @@ static void DrawESP() {
                 draw->AddRectFilled(ImVec2(boxX1, topY), ImVec2(boxX1+hw, topY+barH), hpCol);
                 draw->AddRect(ImVec2(boxX1, topY), ImVec2(boxX2, topY+barH), IM_COL32(0,0,0,255), 0,0,1.5f);
             }
+            // TODO: the distance from the player's camera, not their position, you need to find your position and slightly fix it CALCULATE THE DISTANCE FROM YOUR PLAYER'S POSITION, NOT FROM THE CAMERA'S POSITION
             if (g_ESP_Distance) { char b[32]; snprintf(b,32,"[%.0fm]",dist); draw->AddText(ImVec2(sx-25, boxBottom+4.0f), IM_COL32(255,255,200,255), b); }
         } else {
             if (g_ESP_Snaplines) draw->AddLine(ImVec2(screenWidth/2.0f, screenHeight), ImVec2(sx, sy2), color, 3.0f);
